@@ -43,7 +43,7 @@ let debounceTimeout;
 search.addEventListener("input", (e) => {
   e.preventDefault();
 
-  // clearTimeout(debounceTimeout);
+  clearTimeout(debounceTimeout);
 
   debounceTimeout = setTimeout(() => {
     console.log('Fetching data after 800ms');
