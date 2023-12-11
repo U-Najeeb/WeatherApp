@@ -40,11 +40,14 @@ const getData = async (city_name) => {
 
 form.addEventListener("input", (e) => {
   e.preventDefault();
-  const searchResult = search.value;
-  if (!searchResult) {
-    search.style.border = "5px solid red";
-  } else {
-    search.style.border = "2px solid white";
-    getData(`${searchResult.toLowerCase()}`);
-  }
+  const interval = setInterval(() => {
+    const searchResult = search.value;
+    if (!searchResult) {
+      search.style.border = "5px solid red";
+    } else {
+      search.style.border = "2px solid white";
+      getData(`${searchResult.toLowerCase()}`);
+    }
+    return clearInterval(interval)
+  }, 800)
 });
