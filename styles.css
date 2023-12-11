@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+hmtl{
+    font-size: 62.5%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+.app__container{
+    border-radius: 1rem;
+    height: fit-content;
+    width: 25rem;
+    background: linear-gradient(#31cb52, #2ec9c6);
+    padding: 2rem;
+
+}
+.header__section{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem;
+}
+.header__form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search__box{
+    border: none;
+    height: 3rem;
+    width: 100%;
+    border-radius: 2rem;
+    padding: 1rem;
+    font-family: inherit;
+    outline: white;
+    background: none;
+    border: 3px solid white;
+    color: #fff ;
+}
+.search__box::placeholder{
+    color: #fff;
+    font-family: inherit;
+    font-weight: 500;
+}
+.submit__button{
+    background: none;
+    border: none;
+}
+.submit__icon{
+    width: 2.5rem;
+    margin-left: 1rem;
+}
+.weather__section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.weather__image{
+    width: 8rem;
+}
+.weather__temperature__box{
+    text-align: center;
+}
+.weather__temperature__box h1{
+    color: #fff;
+    font-size: 3rem;
+}
+.weather__temperature__box h2{
+    color: #fff;
+    font-size: 2rem;
+}
+.footer__section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+
+}
+.wind__and__humidity__box{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.wind__and__humidity__image{
+    width: 3rem;
+}
+.wind__and__humidity__number{
+    color: #fff;
+    font-size: 1.1rem;
+    margin-left: 1rem;
+    width: 30%;
+}
+.errorMsg{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}

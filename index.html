@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app__container">
+      <header class="header__section">
+        <form class="header__form">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            class="search__box"
+            placeholder="Enter city name"
+          />
+          <button type="submit" class="submit__button">
+            <img
+              src="./assets/icons8-search-64.png"
+              alt="search"
+              class="submit__icon"
+            />
+          </button>
+        </form>
+      </header>
+      <section class="weather__section">
+        <div class="weather__image__container">
+          <img
+            src="./assets/mist.png"
+            alt="weather-image"
+            class="weather__image"
+          />
+        </div>
+        <div class="weather__temperature__box">
+          <h1 class="degrees">10°C</h1>
+          <h2 class="city">Srinagar</h2>
+        </div>
+      </section>
+      <footer class="footer__section">
+        <div class="wind__box wind__and__humidity__box">
+          <img
+            src="./assets/wind.png"
+            alt="wind"
+            class="wind__image wind__and__humidity__image"
+          />
+          <p class="wind__speed wind__and__humidity__number">10.30 Km/h</p>
+        </div>
+        <div class="humidity__box wind__and__humidity__box">
+          <img
+            src="./assets/humidity.png"
+            alt="humidity"
+            class="humidity__image wind__and__humidity__image"
+          />
+          <p class="humidity__percentage wind__and__humidity__number">40%</p>
+        </div>
+      </footer>
+      <p class = "errorMsg"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
