@@ -16,12 +16,12 @@ const renderData = (response) => {
   const celcius = response.main.temp - celciusToKelvin;
   const windSpeed = (response.wind.speed * 3600) / 1000;
   const humidity = response.main.humidity;
-  // const { main } = response.weather[0];
+  const { main } = response.weather[0];
   city.textContent = `${response.name}, ${response.sys.country}`;
   degrees.textContent = `${Math.floor(celcius)}°C`;
   wind.textContent = `${windSpeed.toFixed(2)}Km/h`;
   humid.textContent = `${humidity}%`;
-  // image.src = `./assets/${main.toLowerCase()}.png`;
+  image.src = `./assets/${main.toLowerCase()}.png`;
 };
 
 const getData = async (city_name) => {
