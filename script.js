@@ -38,16 +38,37 @@ const getData = async (city_name) => {
   }
 };
 
-form.addEventListener("input", (e) => {
+let debounceTimeout;
+
+search.addEventListener("input", (e) => {
   e.preventDefault();
-  const interval = setInterval(() => {
+
+  // clearTimeout(debounceTimeout);
+
+  debounceTimeout = setTimeout(() => {
+    console.log('Fetching data after 800ms');
     const searchResult = search.value;
     if (!searchResult) {
       search.style.border = "5px solid red";
-    } else {
+    } else { 
       search.style.border = "2px solid white";
       getData(`${searchResult.toLowerCase()}`);
     }
-    return clearInterval(interval)
-  }, 800)
+    return clearTimeout(debounceTimeout)
+  }, 800);
 });
+
+// search.addEventListener("input", (e) => {
+//   e.preventDefault();
+//   const interval = setTimeout(() => {
+//     console.log('i')
+//     const searchResult = search.value;
+//     if (!searchResult) {
+//       search.style.border = "5px solid red";
+//     } else { 
+//       search.style.border = "2px solid white";
+//       getData(`${searchResult.toLowerCase()}`);
+//     }
+//     return clearTimeout(interval)
+//   }, 800)
+// });
