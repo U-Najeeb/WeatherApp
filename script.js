@@ -7,6 +7,7 @@ const form = document.querySelector(".header__form");
 const wind = document.querySelector(".wind__speed");
 const humid = document.querySelector(".humidity__percentage");
 const image = document.querySelector(".weather__image");
+// import { Countries } from "./resources";
 
 const API_KEY = "238936edbaadb5acc2ea944267d24159";
 
@@ -22,6 +23,7 @@ const renderData = (response) => {
   humid.textContent = `${humidity}%`;
   // image.src = `./assets/${main.toLowerCase()}.png`;
 };
+
 const getData = async (city_name) => {
   try {
     const request = await fetch(
@@ -29,7 +31,6 @@ const getData = async (city_name) => {
     );
     const response = await request.json();
     renderData(response);
-    console.log(response)
     document.querySelector(".errorMsg").innerHTML = " "
     
   } catch (error) { 
@@ -37,7 +38,7 @@ const getData = async (city_name) => {
   }
 };
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("input", (e) => {
   e.preventDefault();
   const searchResult = search.value;
   if (!searchResult) {
